@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./pages/**/*.{html,js,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        QuickSand: ['Quicksand', "sans-serif"]
+      }
+    },
   },
   plugins: [],
 }

@@ -1,0 +1,6 @@
+{
+    whoAmI {
+        userId
+        mentorId
+    }
+}
