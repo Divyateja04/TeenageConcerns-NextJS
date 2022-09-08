@@ -1,9 +1,11 @@
-import { useUserLoginMutation } from '../generated/graphql';
+import { useUserLoginMutation } from '../../generated/graphql';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 type Props = {}
 
 const userLogin = (props: Props) => {
+  const router = useRouter();
   const [uuid, setUuid] = useState("");
   const [error, setError] = useState("");
 
@@ -13,6 +15,8 @@ const userLogin = (props: Props) => {
     const response = await loginUser({ uuid });
     if (response.data?.userLogin.errors) {
       setError(response.data?.userLogin.errors[0].message)
+    } else {
+      router.push('/user/dashboard');
     }
   }
 

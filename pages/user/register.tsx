@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useCreateUserMutation } from '../generated/graphql';
+import { useCreateUserMutation } from '../../generated/graphql';
 
 type Props = {}
 
